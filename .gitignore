@@ -2,3 +2,4 @@ secure/*
 phpmyadmin/*
 old_data/*
 minireport.zip
+connection.php
