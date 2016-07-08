@@ -1,4 +1,4 @@
-secure/
-phpmyadmin/
-old_data/
+secure/*
+phpmyadmin/*
+old_data/*
 minireport.zip
