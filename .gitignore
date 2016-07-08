@@ -1,5 +1,5 @@
 secure/*
-phpmyadmin/*
+phpmyadmin
 old_data/*
 minirepo.zip
 connection.php
