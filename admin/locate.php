@@ -1,7 +1,7 @@
 <?php
    require_once("../secure/db.php");
    session_start();
-  if(!isset($_SESSION['admin'])  AND empty($_GET['id'])){
+  if(!isset($_SESSION['admin'])  OR  empty($_GET['id'])){
       //header("location:login.php");
       die("Something went wrong");
    }
