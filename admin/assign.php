@@ -80,7 +80,19 @@
 
 				<div class="col-xs-8">
 	                <div class="input-group">
-	                    <blockquote class="text-danger"><?= $value['full_name']; ?></blockquote>
+	                    <blockquote class="text-danger">
+	                    <?php  
+	                    	if(empty($value['full_name'])){
+	                    		echo 'No name('.$value['username'].')'; 
+	                    	} 
+	                    	else
+	                    	{
+	                    		echo $value['full_name'].'('.$value['username'].')'; 	
+	                    	}
+	                    	
+                    	?>
+	                    	
+	                    </blockquote>
 	                    <div class="input-group-btn">
 	                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Select Organisation<span class="caret"></span></button>
 	                        <ul class="dropdown-menu pull-right">
