@@ -10,13 +10,22 @@ if( isset($_POST['username']) &&  isset($_POST['lattitude']) && isset($_POST['lo
     $j = $_POST['longitude'];
   
 
-    $org_id =  $row['org_id'];
+       $sql1 = "SELECT * FROM student WHERE username = '$a'";
+       $result2 = mysqli_query($conn,$sql1);
+      $org_data = mysqli_fetch_array($result2,MYSQLI_ASSOC);
+
+      $org_id =  $org_data['org_id'];
       $sql2 = "SELECT * FROM org WHERE org_id = '$org_id'";
 
       $result2 = mysqli_query($conn,$sql2);
       $org_data = mysqli_fetch_array($result2,MYSQLI_ASSOC);
-      #print_r($result2);
+      #var_dump($result2);
       $loc = $org_data['org_location'];
+      $uri = "http://geofence.in/api.php?lat=$i&lng=$j&loc=$loc";
+
+      #echo $uri;
+
+      #die();
 
       $status = file_get_contents("http://geofence.in/api.php?lat=$i&lng=$j&loc=$loc");
    
