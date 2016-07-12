@@ -12,7 +12,7 @@
       $uname = mysqli_real_escape_string($db,$_POST['uname']);
       $password = mysqli_real_escape_string($db,$_POST['password']); 
       
-      $sql = "SELECT uid FROM users WHERE uname = '$uname' and password = '$password'";
+      $sql = "SELECT uid,fbid FROM users WHERE uname = '$uname' and password = '$password'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       
@@ -22,7 +22,8 @@
         
       if($count == 1) {
          $_SESSION['admin'] = $uname;
-         
+         $_SESSION['fbid'] = $row['fbid'];         
+         //print_r($row);
          header("location: index.php");
       }else {
          $error = "Your Login Name or Password is invalid";
