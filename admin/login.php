@@ -2,7 +2,7 @@
    require_once("../secure/db.php");
    session_start();
    if(isset($_SESSION['admin'])){
-      header("location:profile.php");
+      header("location:index.php");
       die();
    }
    

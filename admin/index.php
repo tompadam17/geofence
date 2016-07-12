@@ -92,9 +92,9 @@
 							Location History </a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="assign.php">
 							<i class="glyphicon glyphicon-ok"></i>
-							Account Settings </a>
+							Assign Organisation </a>
 						</li>
 						<li>
 							<a href="tracker.php">
